@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>yeezy</title>
+  <link rel="icon" type="image/png" sizes="16x16" href="public/images/logo.png">
+  <link rel="stylesheet" href="public/css/w3.css">
+  <link rel="stylesheet" href="public/css/index.css">
+</head>
+<script>
+  function list(active) {
+    var i;
+    var x = document.getElementsByClassName("menu")
+    for (i = 0; i < x.length; i++) {
+      x[i].style.display = "none";
+    }
+    document.getElementById(active).style.display = "block";
+  }
+
+  function navbar() {
+    var x = document.getElementById("Demo");
+    if (x.className.indexOf("w3-show") == -1) {
+      x.className += " w3-show";
+    } else {
+      x.className = x.className.replace(" w3-show", "");
+    }
+  }
+</script>
+
+<body>
+
+  <div class="banner"></div>
+  <!-- navbar -->
+  <div class="w3-bar w3-black ">
+    <button class="w3-bar-item w3-button w3-padding-large" onclick="list('Home')">Home</button>
+    <div class="w3-dropdown-click">
+      <button onclick="navbar()" class="w3-button w3-black w3-padding-large">Art</button>
+      <div id="Demo" class="w3-dropdown-content w3-bar-block w3-border w3-animate-opacity">
+        <button class="w3-bar-item w3-button w3-padding-large" onclick="list('Album')">Album</button>
+        <button class="w3-bar-item w3-button w3-padding-large" onclick="list('Yeezy')">Yeezy</button>
+      </div>
+    </div>
+    <button class="w3-bar-item w3-button w3-padding-large" onclick="list('Profile')">Profile</button>
+  </div>
+  <!-- profile -->
+  <div id="Profile" class="w3-container w3-center w3-margin-top w3-animate-fading menu" style="display: none;">
+    <div class="profile-card">
+      <div class="profile-header">
+        <h2>Profil Saya</h2>
+      </div>
+      <div class="profile-info">
+        <h3 class="profile-name">Gilang Aldiano</h3>
+        <p class="profile-details">NIM : 10123404</p>
+        <p class="profile-details">Kelas: IF-10</p>
+      </div>
+    </div>
+  </div>
+  <!-- home -->
+  <div id="Home" class="w3-margin-top menu w3-animate-opacity" style="display: none;">
+    <div class="artist-container">
+      <div class="artist-header">
+        <img class="artist-photo" src="https://i.pinimg.com/564x/79/f6/e0/79f6e06e0ca69afd54173517e5391675.jpg" alt="Artist Photo">
+        <h1>Kanye West</h1>
+      </div>
+
+      <div class="artist-info">
+        <h4>American rapper, singer, songwriter, record producer, entrepreneur, and fashion designer.</h4>
+
+        <h2>Discography</h2>
+        <ul>
+          <li>Born: June 8, 1977</li>
+          <li>Birthplace: Atlanta, Georgia</li>
+          <li>Genre: Hip hop, soul, pop</li>
+          <li>Labels: Roc-A-Fella Records, GOOD Music, Def Jam Recordings</li>
+        </ul>
+
+        <h2>Social Media</h2>
+        <p><a href="https://twitter.com/kanyewest" target="_blank">Twitter</a></p>
+        <p><a href="https://www.instagram.com/kanyewest/" target="_blank">Instagram</a></p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Album -->
+  <div id="Album" class="menu w3-animate-opacity" style="display:none;">
+
+    <div class="w3-container album-header">
+      <h1>ALBUM KANYE</h1>
+      <p>Pilih album di bawah ini untuk mendengarkan musik</p>
+    </div>
+
+    <div class="contain">
+      <a href="album1.html" rel="noopener noreferrer">
+        <div class="card">
+          <div class="img-holder">
+            <img src="public/images/altlop.jpg" alt="">
+          </div>
+          <div class="text">
+            <h2>The Life Of Pablo</h2>
+            <p>Album . Kanye West</p>
+          </div>
+          <div class="play-icon">
+            <div class="circle">
+              <div class="triangel"></div>
+            </div>
+          </div>
+        </div>
+      </a>
+
+      <a href="album3.html" rel="noopener noreferrer">
+        <div class="card">
+          <div class="img-holder">
+            <img src="public/images/grad.jpg" alt="">
+          </div>
+          <div class="text">
+            <h2>Graduation</h2>
+            <p>Album . Kanye West</p>
+          </div>
+          <div class="play-icon">
+            <div class="circle">
+              <div class="triangel"></div>
+            </div>
+          </div>
+        </div>
+      </a>
+
+      <a href="album2.html" rel="noopener noreferrer">
+        <div class="card">
+          <div class="img-holder">
+            <img src="public/images/ye.jpg" alt="">
+          </div>
+          <div class="text">
+            <h2>ye</h2>
+            <p>Album . Kanye West</p>
+          </div>
+          <div class="play-icon">
+            <div class="circle">
+              <div class="triangel"></div>
+            </div>
+          </div>
+        </div>
+      </a>
+    </div>
+  </div>
+  <!-- Yeezy -->
+
+  <div id="Yeezy" class="w3-container w3-center w3-margin-top menu" style="display: none;background-color: white;">
+    <div class="w3-content w3-padding" style="max-width:1200px;margin-top:100px">
+      <!-- First Photo Grid-->
+      <div class="w3-row-padding w3-padding-16 w3-center" id="food">
+        <div class="w3-quarter" style=" box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);">
+          <img src="/public/images/350.jpeg" alt="Sandwich" style="width:100%">
+          <h3>Yeezy Boost 350 V2</h3>
+        </div>
+        <div class="w3-quarter" style=" box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);">
+          <img src="/public/images/450.jpeg" alt="Steak" style="width:100%">
+          <h3>Yeezy Boost 700</h3>
+        </div>
+        <div class="w3-quarter" style=" box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);">
+          <img src="/public/images/500.jpeg" alt="Cherries" style="width:100%">
+          <h3>Yeezy Foam Runner</h3>
+        </div>
+        <div class="w3-quarter" style=" box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);">
+          <img src="/public/images/700.jpeg" alt="Pasta and Wine" style="width:100%">
+          <h3>Yeezy 500</h3>
+        </div>
+      </div>
+
+      <!-- Second Photo Grid-->
+      <div class="w3-row-padding w3-padding-16 w3-center">
+        <div class="w3-quarter" style=" box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);">
+          <img src="/public/images/foam.jpeg" alt="Popsicle" style="width:100%">
+          <h3>Yeezy Slide</h3>
+        </div>
+        <div class="w3-quarter" style=" box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);">
+          <img src="/public/images/slide.jpeg" alt="Salmon" style="width:100%">
+          <h3>Yeezy 450</h3>
+        </div>
+        <div class="w3-quarter" style=" box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);">
+          <img src="/public/images/v3.jpeg" alt="Sandwich" style="width:100%">
+          <h3>Yeezy 700 V3 'Kyanite'</h3>
+        </div>
+        <div class="w3-quarter" style=" box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);">
+          <img src="/public/images/mx sand.jpeg" alt="Croissant" style="width:100%">
+          <h3>Yeezy Foam Runner 'MX Sand'</h3>
+        </div>
+      </div>
+    </div>
+</body>
+
+</html>
